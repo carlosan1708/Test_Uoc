@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <style>
             body {
@@ -11,23 +12,28 @@
           </style>
     </head>
   <body>
+
     <div align="center" style="background-color:lightslategray;">
       <h1 style="padding-top: 70px;">PEC 2, Tarea 1</h1>
     
-    <video controls autoplay>
-        <source src="assets/videos/desktop/videoDsk.webm" type="video/webm" />
-        <source src="assets/videos/desktop/videoDsk.mp4" type="video/mp4" />
-      <source
-        src="assets/videos/mobile/vidMob.webm"
-        type="video/mp4"
-        media="(max-width:620)"
-      />
-      <source
-        src="assets/videos/mobile/vidMob.mp4"
-        type="video/mp4"
-        media="(max-width:620)"
-      />
-   
-    </video>
+      <video controls id="myVideo">
+
+      </video>
+      <script>
+        var video = $('#myVideo');
+        console.log(video);
+        var WindowWidth = $(window).width();
+
+        if (WindowWidth < 1200) {
+            //It is a small screen
+            video.append("<source src='assets/videos/mobile/vidMob.webm' type='video/webm' >");
+            video.append("<source src='assets/videos/mobile/vidMob.mp4' type='video/mp4' >");
+
+        } else {
+            //It is a big screen or desktop
+            video.append("<source src='assets/videos/desktop/videoDsk.webm' type='video/webm' >");
+            video.append("<source src='assets/videos/desktop/videoDsk.mp4' type='video/mp4' >");
+        }
+    </script>
   </body>
 </html>
