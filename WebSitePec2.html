@@ -26,7 +26,7 @@
 		<h1 style="padding-top: 70px;">PEC 2, Carlos Andres Rodriguez Trigueros</h1>
 		<video controls id="myVideo"></video>
 	</div>
-	<div class="jumbotron" style="margin-top: 70px;">
+	<div class="jumbotron jumbotron-fluid" style="margin-top: 70px;">
 		<h1 class="display-4">Respuestas</h1>
 		<hr class="my-4">
 		<p class="lead">Tarea 1.1: Elige un clip de vídeo de máximo 20 segundos (puedes crearlo con tu dispositivo móvil, que tenga objetos en detalle y en movimiento) y codifícalo con Avidemux eligiendo el formato y resolución que creas adecuadas para su publicación en web. Teniendo en cuenta que no todos los navegadores aceptan todos los códecs, codifica el vídeo en los formatos necesarios para que sea compatible con el máximo de navegadores posible. Explica las decisiones tomadas en la codificación y el porqué de cada una.</p>
@@ -97,8 +97,7 @@
 			Tarea 2.4: si realizas una pausa en el VLC emisor, ¿cuántos según tarda en pausarse el vídeo en el receptor? ¿Por qué? Vuélvelo a poner en reproducción.
 		</p>
 		<p class = "leftAlign">	
-			Tarda alrededor de 3 segundos en reaccionar. Cuando se hace una transmisión existe se da latencia, y eso agrega tiempo, pues los datos tardan los datos en del emisor al receptor. En una transmisión por internet, el ancho de banda, y la distancia que crea la latencia va a determinar en buena parte el comportamiento, en este ejercicio dependerá de computadora y sus recursos. En mi caso esos tres segundos es lo que tardan en llegar al VLC receptor los últimos datos enviados por el VLC emisor antes de la pausa.
-		</p>
+			Tarda alrededor de 3 segundos en reaccionar. Cuando se hace una transmisión se da latencia, y eso crea un retraso en la transmisión, pues los datos tardan en llegar del emisor al receptor. En una transmisión por internet, el ancho de banda, y la distancia que crea la latencia va a determinar en buena parte el comportamiento, en este ejercicio dependerá en gran parte en la computadora y sus recursos, para codificar y decodificar. En mi caso esos tres segundos es lo que tardan en llegar al VLC receptor los últimos datos enviados por el VLC emisor antes de la pausa.		</p>
 		<hr class="my-4">
 		<p class="lead">
 			Tarea 2.5: Calcula aproximadamente la compresión que el VLC de emisión está realizando al transcodificar el fichero almacenado a stream en formato H.264. Realiza una captura de pantalla del escritorio con los dos VLC en marcha y sus ventanas con las estadísticas de cada uno abiertas, e inserta la captura en el documento en el cual escribes las respuestas de esta práctica. 
